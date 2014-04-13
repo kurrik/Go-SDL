@@ -25,6 +25,11 @@ package sdl
 //     return ptr-start;
 // }
 //
+// // See https://github.com/banthar/Go-SDL/pull/12
+// #ifdef __MINGW32__
+//  #define fdopen _fdopen
+// #endif
+//
 // static int RWseek(SDL_RWops *rw, int os, int w){return SDL_RWseek(rw, os, w);}
 // static int RWread(SDL_RWops *rw, void *d, int size, int max){return SDL_RWread(rw, d, size, max);}
 // static int RWwrite(SDL_RWops *rw, void *d, int size, int num){return SDL_RWwrite(rw, d, size, num);}
