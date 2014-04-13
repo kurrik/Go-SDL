@@ -955,9 +955,9 @@ func (rw *RWops) Write(buf []byte) (n int, err error) {
 }
 
 func (rw *RWops) Close() error {
-	//if int(C.RWclose((*C.SDL_RWops)(rw))) != 0 {
-	//	return errors.New(GetError())
-	//}
+	if int(C.RWclose((*C.SDL_RWops)(rw))) != 0 {
+		return errors.New(GetError())
+	}
 
 	return nil
 }
