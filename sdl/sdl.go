@@ -25,7 +25,7 @@ package sdl
 //     return ptr-start;
 // }
 //
-// #ifdef __MINGW32__
+// #ifdef __MINGW64__
 //  #define fdopen _fdopen
 // #endif
 //
