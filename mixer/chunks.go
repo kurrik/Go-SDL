@@ -83,3 +83,9 @@ func GetChunk(channel int) *Chunk {
 	}
 	return &Chunk{out}
 }
+
+//Checks to see if the specified channel is currently playing
+//Returns: 1 if the channel is currently playing or 0 if not playing
+func (c *Chunk) IsPlaying(channel int) int {
+	return int(C.Mix_Playing(C.int(channel)))
+}
